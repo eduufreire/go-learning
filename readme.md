@@ -55,3 +55,10 @@ arrays
 - ou seja, é precisa deixar explicito o tamanho do array para alocação de memoria no momento da compilacao
 - é mais comum o uso de slices, arrays sao usados em cenarios especificos
 
+slices:
+- sao mais comuns que arrays
+- disponibiliza uma interface melhorada do array
+- 
+
+deslocamento de bits:
+- deslocar digitos binaarios para a esquerda ou direita
