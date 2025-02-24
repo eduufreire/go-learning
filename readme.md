@@ -58,7 +58,8 @@ arrays
 slices:
 - sao mais comuns que arrays
 - disponibiliza uma interface melhorada do array
-- 
+- usados para armazenar multiplos valores do mesmo tipo
+- comprimento pode aumentar ou diminuir 
 
 deslocamento de bits:
 - deslocar digitos binaarios para a esquerda ou direita
