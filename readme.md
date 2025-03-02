@@ -9,7 +9,8 @@ com a eficiencia e seguranca de uma lnugagem estaticameante tipada e compilada
     - sem conversoes de tipos implicitas
     - precisamos ser explicitos na tipagem
 - coleta o lixo pra voce e integra o sistema ao seu binario executavel
-- 
+- lida bem com concorrencia
+
 
 
 dúvidas:
@@ -59,7 +60,20 @@ slices:
 - sao mais comuns que arrays
 - disponibiliza uma interface melhorada do array
 - usados para armazenar multiplos valores do mesmo tipo
-- comprimento pode aumentar ou diminuir 
+- comprimento pode aumentar ou diminuir  em tempo de execucao 
 
 deslocamento de bits:
 - deslocar digitos binaarios para a esquerda ou direita
+
+maps
+- estrutura de dados de chave-valor
+- pode ser util para melhorar a eficiencia ao manipular colecoes de dados
+- pesquisar dados rapidamente
+- 
+
+modulos
+- go mod
+- se começar com letra maiuscula, quer dizer que pode ser exportada
+- com letra minuscula, ele nao sera exportada e nao pode ser acessada fora do módulo
+- privado = letra minuscula
+- publico = letra maiuscula

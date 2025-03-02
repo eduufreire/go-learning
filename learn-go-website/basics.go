@@ -10,6 +10,9 @@ import (
 	"fmt"
 	"math"
 	"math/rand"
+
+	"github.com/eduufreire/curso-go/meet"
+	"github.com/eduufreire/curso-go/minecraft"
 )
 
 // o tipo dos paramentros vem depois do nome
@@ -25,7 +28,6 @@ func swap(x, y string) (string, string) {
 	return y, x
 }
 
-
 // valores de retorno podem ser nomeados e agirem apenas como variaveis
 // ajudam a documentar o significado do retorno
 // recomendado apenas para funcoes curtas pois pode prejudicar a legibilidade
@@ -36,8 +38,6 @@ func split(sum int) (x, y int) {
 	y = sum - x
 	return
 }
-
-
 
 func main() {
 	fmt.Println("Número aleatorio: ", rand.Intn(10))
@@ -50,5 +50,8 @@ func main() {
 
 	a, b := swap("hello", "world")
 	fmt.Println(a, b)
-}
 
+	fmt.Print(meet.SayTeste())
+	fmt.Print(minecraft.SoundVillage())
+	fmt.Print(minecraft.spawnIronGolen())
+}
