@@ -12,11 +12,11 @@ com a eficiencia e seguranca de uma lnugagem estaticameante tipada e compilada
 - lida bem com concorrencia
 
 
-
 dúvidas:
 o que concorrencia na prograemacao?
 o que é o garbage collecotor?
 diferença entre tipagem estatica e dinamica | linguagem interpretada e compilada
+o que é uma closure?
 
 
 - standard library
@@ -77,3 +77,7 @@ modulos
 - com letra minuscula, ele nao sera exportada e nao pode ser acessada fora do módulo
 - privado = letra minuscula
 - publico = letra maiuscula
+
+
+ponteiros
+- 
