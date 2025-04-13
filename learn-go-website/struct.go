@@ -21,6 +21,8 @@ func (c Cliente) Apresentar() {
 	fmt.Println("ola cliente tal tal tal bla bla bla")
 }
 
+
+
 func main() {
 	cliente1 := Cliente{
 		Nome:     "edu",

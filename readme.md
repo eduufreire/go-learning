@@ -2,10 +2,29 @@ linguagem procedural criada para resolver questoes de performance e complexidade
 go combina a facilidade da programacao de uma linguagem interpretada e dinamincamente tipada
 com a eficiencia e seguranca de uma lnugagem estaticameante tipada e compilada
 
+projetada para ser eficiente, simples, segura e escalável
+possui alto desempenho, suporet para programacao concorrente e escalabilidade
+possui recursos integrados para lidar com taregas concorrentes
+
+linguagem compilada, ou seja, o codigo é transformada em um executavel
+- binario estatico
+
+vantagens do go:
+- desempenho: compilada código em linguagem de máquina altamente otimizado,
+- simplicidade e legibilidade: sintaxe limpa e concisa, evitando recursos descenessarios
+- suporte integrado para concorrencia: permite execuções pararelas atraves dos channels e goroutines
+- gerenciamento automatico de memoria: possui garbage collector, nao precisando se preocupar com alocacao/desalocacao de memoria
+- bibiotecas padroes: diversas bibilotescas nativas, sem dependencia de bibliotesas de terceitos
+- cross-plataforma: codigo complicado pode ser executado em qualquer SO
+
+a linguagem go segue o paradigma imperativo:
+- estilo que enfatiza a squencia de instrucoes para manipular o estado do programa
+
+
 - consciso, explicito e facil de trabalhar
 - projetado com compilacao rapida
 - remove complexidades em dependencias, compilacao, segurança e manutencao
-- segura porque é fortemente tipada e estaticamente tipada
+- fortemente tipada e estaticamente tipada
     - sem conversoes de tipos implicitas
     - precisamos ser explicitos na tipagem
 - coleta o lixo pra voce e integra o sistema ao seu binario executavel
@@ -61,6 +80,7 @@ slices:
 - disponibiliza uma interface melhorada do array
 - usados para armazenar multiplos valores do mesmo tipo
 - comprimento pode aumentar ou diminuir  em tempo de execucao 
+- são passados por referencias para funcoes
 
 deslocamento de bits:
 - deslocar digitos binaarios para a esquerda ou direita
@@ -81,3 +101,47 @@ modulos
 
 ponteiros
 - 
+
+concorrencia é sobre lidar com mutias coisas de uma só vez
+- capacidade de executar diversas tarefas sem interromper a execucao por completo
+- é um conceito, parece que está sendo executado tudo ao mesmo tempo, mas nao
+- exemplos:
+    - programar, pegar a xicara e tomar cafe
+    - estamos lidando com duas coisas mas nao ao mesmo tempo
+    - temos que parar a execucao de uma para iniciar a outra
+
+paralelismo é fazer varias coisas ao mesmo tempo
+- execucao real de varias tarefas ao mesmo tempo
+- ex: temos 100 imagens e temos 4 computadores. podemos distribuir 25 imagens para cada pc executar em paralelo
+- outro exemplo:
+    - programar e ouvir musica, estamos fazendo ao mesmo tempo
+
+go routines
+- tem o objetivo de permitir que funcoes sejam executadas concorrentemented de maneira facil
+- são gerenciadas pelo runtime do Go
+- sao mais leves que aas threads convencionais, podendo haver milhares de goroutines em um thread
+- rodam no mesmo espaço de memoria, podendo compartilhar objetos
+- é preciso usar channels para sincronizar e evitam race condition
+- existem apenas no espaço virtual da runtime
+
+
+channels:
+- serve para comunicacao e sincronizacao de processos concorrentes
+- maneira de compartilhar valores entre goroutines
+- forma mais segura de comunicacao
+- só podem ser fechados pelo remetente
+
+buffered channels:
+- nao bloqueiam o envio e recebimento em alguns cenarios
+- guardam o valor enviado temporariamente em um buffer, que sera lido e removido quando alguem receber
+- caso um buffer esteja cheio, a goroutine é bloqueado até que haja um espaço
+
+diferença entre channels e buffered channels:
+- channel: 
+    - o remetente é bloqueado até que um receptor esteja pronto para receber
+    - o receptor tambem é bloqueado ate que os dados estejam disponiveis
+    - utliza-se quando a sincronizacao é crucial
+- buffered channels
+    - armazena um determinado numero de valores, nao bloquando o envio
+    - o receptor é bloqueado apenas quando o buffer estiver vazio
+    - podemos usar quando a sincronizacao nao é tao critica
